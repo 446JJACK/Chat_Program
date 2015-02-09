@@ -1,0 +1,30 @@
+BACKLOG
+-------
+
+- WebClient
+- WebServer
+- Stand-Alone Client
+- Phone Client
+- Multiple Chat Rooms
+- Create Chat Rooms
+- User Logins
+- Private Chat/Messaging
+- Search Messages
+- Profanity Filter
+
+Chat Room Functions
+-------------------
+
+- Flood Timeout
+- Inserting Images
+- Chat Restrictions
+- Disable/Enable URLS
+- Report/Block User (Unblock)
+- Typing feature
+- Colors/Fonts
+- Upload Documents
+
+Groups
+------
+
+
