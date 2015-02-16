@@ -5,7 +5,7 @@
 #chatbox {
     height:300px;
     width:75%;
-    background:#A3FFFF; 
+    background:#A3FFFF;
     border:1px solid black;
     padding:2px;
 }
@@ -16,16 +16,14 @@
     border:1px solid black;
     padding:2px;
 }
-
-#wrapper{
+#wrapper {
     margin:0 auto;
     padding-bottom:25px;
     width:500px;
     background:#DFF3F5;
     padding:10px;
-    
 }
-#textbox{
-    width:82.5%;
+#textbox {
+    width:86%;
     border:1px solid black;
 }
