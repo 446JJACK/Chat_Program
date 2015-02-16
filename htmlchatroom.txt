@@ -5,4 +5,4 @@
 <form>
    <input id="textbox"name="message" type="text" method="post" action=""/>
    <input name="submitmsg" type="submit" value="send" />
-    </for
+    </form>
