@@ -1,8 +1,8 @@
 <title>Prototype Chat</title>
 <div id="wrapper">
-<div class="box" id="chatbox"></div>
-<div class="box" id="viewers"></div>
-<form>
-   <input id="textbox"name="message" type="text" method="post" action=""/>
-   <input name="submitmsg" type="submit" value="send" />
+    <div class="box" id="chatbox"></div>
+    <div class="box" id="viewers"></div>
+    <form>
+        <input id="textbox" name="message" type="text" method="post" action="" />
+        <input name="submitmsg" type="submit" value="send" />
     </form>
