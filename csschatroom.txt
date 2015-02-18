@@ -1,29 +1,27 @@
 .box {
     float:left;
     overflow:auto;
+    height:700px;
+    border: 1px solid black;
+    margin:10px;
 }
 #chatbox {
-    height:300px;
     width:75%;
     background:#A3FFFF;
-    border:1px solid black;
-    padding:2px;
 }
 #viewers {
-    height:300px;
     width:20%;
     background:#00CCFF;
-    border:1px solid black;
-    padding:2px;
 }
-#wrapper {
+html, #wrapper {
     margin:0 auto;
     padding-bottom:25px;
-    width:500px;
+    width:100%;
+    height:100%;
     background:#DFF3F5;
     padding:10px;
 }
 #textbox {
-    width:86%;
+    width:93%;
     border:1px solid black;
 }
