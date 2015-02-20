@@ -19,7 +19,7 @@
   </head>
   <body>
     <div id="wrapper">
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs"> <--! Need Bootstrap to utilize -->
         <li role="presentation" class="active"><a href="#">Chat Room 1</a></li>
         <li role="presentation"><a href="#">Chat Room 2</a></li>
         <li role="presentation"><a href="#">Chat Room 3</a></li>
