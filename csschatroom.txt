@@ -1,4 +1,4 @@
-.box {
+.box {                                  /* Contains #chatbox & #viewers */
     float:left;
     overflow:auto;
     height:700px;
