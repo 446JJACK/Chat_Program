@@ -4,3 +4,13 @@ lsof -i :8080
 ---------------------
 lsof -i :<portNumber>
 kill <PID>
+---------------------
+
+GIT REQUIRED COMMANDS
+---------------------
+git status
+git pull
+git add -A
+git commit -m "message"
+git push
+----------------------
