@@ -1,5 +1,11 @@
 #TO DO LIST FOR CLIENT SIDE CODE
 
+2/22/15
+-------
+1) Login.html page
+2) Register.html page
+3) Make a css file that gives each page the same look
+
 
 
 

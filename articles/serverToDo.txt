@@ -1,3 +1,8 @@
 #TO DO LIST FOR SERVER SIDE CODE
 
+2/22/15
+-------
+1) Using Twisted to serve up our html file
+
+
 
