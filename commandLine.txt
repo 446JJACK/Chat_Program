@@ -1,0 +1,6 @@
+Free a port
+---------------------
+lsof -i :8080
+---------------------
+lsof -i :<portNumber>
+kill <PID>
