@@ -1,6 +1,7 @@
 from twisted.internet.protocol import Factory
 from twisted.protocols.basic import LineReceiver
 from twisted.internet import reactor
+from twisted.web import server, resource
 
 class Chat(LineReceiver):
 
@@ -28,6 +29,8 @@ class Chat(LineReceiver):
             return
         self.sendLine("Welcome, %s!" % (name,))
         self.name = name
+        for user, protocol in self.users.iteritems():
+            protocol.transport.write("%s\r\n" % (name + " connected to chat"))
         self.users[name] = self
         self.state = "CHAT"
 
@@ -47,5 +50,5 @@ class ChatFactory(Factory):
         return Chat(self.users)
 
 
-reactor.listenTCP(8081, ChatFactory())
+reactor.listenTCP(8092, ChatFactory())
 reactor.run()
