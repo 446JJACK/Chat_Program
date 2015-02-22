@@ -37,7 +37,7 @@ class Chat(LineReceiver):
         self.state = "CHAT"
 
     def handle_CHAT(self, message):
-        message = "<%s> %s" % (self.name, message)
+        message = "<%s says:> %s" % (self.name, message)
         for name, protocol in self.users.iteritems():
             if protocol != self:
                 protocol.sendLine(message)
@@ -53,7 +53,7 @@ class ChatFactory(Factory):
 
 def main():
     ##log.startLogging(sys.stdout) ##Uncomment for debugging purposes
-    reactor.listenTCP(8091, ChatFactory())
+    reactor.listenTCP(8098, ChatFactory())
     reactor.run()
 
 
