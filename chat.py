@@ -53,7 +53,11 @@ class ChatFactory(Factory):
 
 def main():
     ##log.startLogging(sys.stdout) ##Uncomment for debugging purposes
+<<<<<<< HEAD
     reactor.listenTCP(8080, ChatFactory())
+=======
+    reactor.listenTCP(8090, ChatFactory())
+>>>>>>> 589bb7cdd782a742347199fe8f0921e72d4b0b7c
     reactor.run()
 
 
