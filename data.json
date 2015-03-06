@@ -1,0 +1,17 @@
+[
+	{
+		"tag": "p",
+		"class": "bold",
+		"content": "this is a bold paragraph"
+	},
+	{
+		"tag": "p",
+		"class": "hidden",
+		"content": " This paragraph is hidden"
+	},
+	{
+		"tag": "p",
+		"class": "bold",
+		"content": "This paragraph has extra <em>tags</em>"
+	}
+]
