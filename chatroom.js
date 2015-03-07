@@ -1,39 +1,30 @@
-//console.log('hello world');
+function clickSubmit() {
+  var divBox = document.querySelector("div#chatbox");
+  var form = document.querySelector("form");
+  var submitButton = document.querySelector("button#submit");
+
+  divBox.style.background = "white";
+  divBox.style.height = "500px";
+  divBox.style.width = "250px";
+  divBox.style.border = "2px solid black";
+  divBox.style.boxShadow = "5px 5px 5px 5px #0bF";
+
+
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    var textbox = document.createElement('p');
+    textbox.innerHTML = document.querySelector("input#textbox").value;
+
+    document.querySelector("input#textbox").value = "";
+
+    divBox.appendChild(textbox);
+
+    clickSubmit();
+  });
+}
 
 window.addEventListener("load", function() {
-
-    document.querySelector('button#submit').addEventListener('click', function() {
-
-        var container = document.querySelector('div#wrapper');
-        var message = document.querySelector('input#textbox').value;
-
-        var newNode = document.createElement('div');
-        newNode.innerHTML = message;
-        container.appendChild(newNode);
-        console.log(newNode);
-
-        var xhr = new XMLHttpRequest();
-
-        xhr.open('GET', "data.json");
-
-        xhr.addEventListener('readystatechange', function (){
-
-            if (xhr.readyState === 4) {
-                alert('ready state 4');
-                var objList = JSON.parse(xhr.responseText);
-
-                for(var i =0; i < objList.length; i++) {
-                    var obj = objList[i];
-
-                    var elem = document.createElement(obj.tag);
-                    elem.classList.add(obj.class);
-
-                    elem.innerHTML = obj.content;
-
-                    container.appendChild(elem);
-                }
-            }
-         });
-        xhr.send();
-    });
+  console.log('hello world');
+  clickSubmit();
 });
