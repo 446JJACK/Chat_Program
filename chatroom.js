@@ -1,15 +1,16 @@
-console.log('hello world');
+//console.log('hello world');
 
 window.addEventListener("load", function() {
 
     document.querySelector('button#submit').addEventListener('click', function() {
 
-
         var container = document.querySelector('div#wrapper');
+        var message = document.querySelector('input#textbox').value;
 
         var newNode = document.createElement('div');
-        newNode.innerHTML = "hello";
+        newNode.innerHTML = message;
         container.appendChild(newNode);
+        console.log(newNode);
 
         var xhr = new XMLHttpRequest();
 
@@ -33,17 +34,6 @@ window.addEventListener("load", function() {
                 }
             }
          });
-
         xhr.send();
     });
-/*
-    document.getElementById('submit').onclick = function() {
-        var textbox = document.getElementById('textbox').value;
-        document.querySelector('').innerHTML = "<p>" + textbox + "</p>";
-        alert('button was clicked');
-
-    };
-*/
 });
-
-
