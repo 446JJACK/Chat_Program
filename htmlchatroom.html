@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PSU Chat Rooms</title>
 
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="chatroom.js"></script>
+
+
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="chatroom.css" rel="stylesheet"></link>
@@ -19,7 +27,7 @@
   </head>
   <body>
     <div id="wrapper">
-        <ul class="nav nav-tabs"> <--! Need Bootstrap to utilize -->
+        <ul class="nav nav-tabs"> <!-- Need Bootstrap to utilize -->
         <li role="presentation" class="active"><a href="#">Chat Room 1</a></li>
         <li role="presentation"><a href="#">Chat Room 2</a></li>
         <li role="presentation"><a href="#">Chat Room 3</a></li>
@@ -28,14 +36,12 @@
         <div class="box" id="viewers"></div>
         <form>
             <input id="textbox" name="message" type="text" method="post" action="" />
-            <input name="submitmsg" type="submit" value="send" />
+            <input id="submit" name="submitmsg" type="submit" value="send" />
+
         </form>
     </div>
-    
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+
+
   </body>
 </html>
