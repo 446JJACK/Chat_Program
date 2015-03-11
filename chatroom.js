@@ -25,7 +25,7 @@ function clickSubmit() {
 }
 
 window.addEventListener("load", function() {
-  console.log('hello world');
+  console.log('Chat Application Test');
   clickSubmit();
 });
 
