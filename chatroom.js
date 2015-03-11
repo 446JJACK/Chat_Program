@@ -7,7 +7,7 @@ function clickSubmit() {
   divBox.style.height = "500px";
   divBox.style.width = "250px";
   divBox.style.border = "2px solid black";
-  divBox.style.boxShadow = "5px 5px 5px 5px #0bF";
+  divBox.style.boxShadow = "5px 5px #0bF";
 
 
 
@@ -28,3 +28,6 @@ window.addEventListener("load", function() {
   console.log('hello world');
   clickSubmit();
 });
+
+
+cl
