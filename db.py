@@ -7,7 +7,7 @@
 
 import sqlite3
 
-#creat a database in RAM
+#creat a database files called users.db
 db = sqlite3.connect('users.db')
 
 
@@ -17,7 +17,7 @@ cursor.execute('''
                        email TEXT, displayname TEXT)
               ''')
 #EXAMPLE DATA##
-accountname = "jlivu001"
+accountname = "jlivu00"
 password = "12345"
 email = "james@gmail.com"
 displayname = "james"
@@ -26,5 +26,5 @@ displayname = "james"
 cursor.execute('''INSERT INTO users(accountname, password, email, displayname)
                   VALUES(?,?,?,?)''',(accountname, password, email, displayname))
 
-print('First user inserted')
+print('First user inserted')#sanity check
 db.commit()
