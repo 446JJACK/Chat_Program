@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PSU Chat Rooms</title>
-
-    <script src="chatroom.js"></script>
-
-    <link href="style.css" rel="stylesheet"></link>
-  </head>
-  <body>
-    <div>
-        <div class="box" id="chatbox"></div>
-        <form>
-            <input id="textbox" name="message" type="text" method="post" action="" value ="" />
-            <input id="submit" name="submitmsg" type="submit" value="send" />
-
-        </form>
-    </div>
-
-
-
-  </body>
+<html>
+<head>
+	<title>Chatroom Login Page</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<section class="loginform cf">
+		<form name="login" action="index_submit" method="get" accept-charset="utf-8">
+			<ul>
+				<li>
+				  <label for="account"><strong>Account</strong></label>
+				  <input type="account" name="useraccount" placeholder="your login account" required>
+				</li>
+				<li>
+				  <label for="password3"><strong>Password</strong></label>
+			    <input type="password" name="password" placeholder="your password" required></li>
+				<li>
+					<input type="submit" value="Login">
+				</li>
+			</ul>
+		</form>
+	</section>
+</body>
 </html>
