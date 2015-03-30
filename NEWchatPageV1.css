@@ -30,7 +30,8 @@ html {
   right: 0;
   bottom: 0;
   padding: 20px;
-  border: 1px solid #ccc; 
+  border: 1px solid #ccc;
+  overflow: auto;
 }
 [type=radio]:checked ~ label {
   background: white;
@@ -44,3 +45,4 @@ html {
 #msg {
   width: 470px;
 }
+
