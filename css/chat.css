@@ -1,0 +1,12 @@
+#wrapper {
+    background: linear-gradient(180deg, white, #ddd); /* Standard syntax */
+}
+
+#chatbox {
+    width: 250px;
+    height: 500px;
+    background: white;
+    box-shadow: 2px 2px 2px black;
+
+
+}
