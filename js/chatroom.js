@@ -3,11 +3,12 @@ function clickSubmit() {
   var form = document.querySelector("form");
   var submitButton = document.querySelector("button#submit");
 
-  divBox.style.background = "white";
+  /*divBox.style.background = "white";
   divBox.style.height = "500px";
   divBox.style.width = "250px";
   divBox.style.border = "2px solid black";
-  divBox.style.boxShadow = "5px 5px 5px 5px #0bF";
+  divBox.style.boxShadow = "5px 5px #0bF";
+  */
 
 
 
@@ -28,3 +29,6 @@ window.addEventListener("load", function() {
   console.log('Chat Application Test');
   clickSubmit();
 });
+
+
+cl
