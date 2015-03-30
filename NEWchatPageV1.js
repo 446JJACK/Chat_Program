@@ -42,29 +42,6 @@ function addChatRm() {
   console.log(newTab);
   
   tabContainer.insertBefore(newTab, tabContainer.childNodes[numTabs + 1]);
-
-  /*var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'data.json');
-  
-  var temp = "";
-
-  xhr.addEventListener("readystatechange", function() {
-    if (xhr.readyState === 4) {
-      var objList = JSON.parse(xhr.responseText);
-      temp += objList[0].newTab;
-      
-      
-      //var idTemp =
-      newLabel.setAttribute('for', newTab.id);
-      newLabel.innerHTML = newTab.id;
-      console.log(newLabel);
-      newTab.innerHTML = temp;
-      newTab.innerHTML += newLabel;
-      console.log(newTab);
-      tabContainer.insertBefore(newTab, tabContainer.childNodes[numTabs + 1]);
-    }
-  });
-  xhr.send();*/
 }
 
 function init() {
@@ -74,8 +51,8 @@ function init() {
     sendMsg();
   });
 
-  document.onkeydown = function() {
-    if (window.event.keyCode == '13') {
+  document.onkeydown = function(e) {
+    if ((e || window.event).keyCode == '13') {
       sendMsg();
     }
   };
