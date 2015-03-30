@@ -8,7 +8,7 @@
 import sqlite3
 
 #creat a database files called users.db
-db = sqlite3.connect('users.db')
+db = sqlite3.connect('usersexample.db')
 
 
 cursor = db.cursor()
@@ -17,7 +17,7 @@ cursor.execute('''
                        email TEXT, displayname TEXT)
               ''')
 #EXAMPLE DATA##
-accountname = "jlivu00"
+accountname = "jlivu001"
 password = "12345"
 email = "james@gmail.com"
 displayname = "james"
