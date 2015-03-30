@@ -17,7 +17,7 @@ cursor.execute('''
                        email TEXT, displayname TEXT)
               ''')
 #EXAMPLE DATA##
-accountname = "jlivu00"
+accountname = "jlivu001"
 password = "12345"
 email = "james@gmail.com"
 displayname = "james"
