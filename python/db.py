@@ -3,12 +3,43 @@
 #TO RUN GO TO COMMAND LINE AND TYPE -> sqlite3 users.db AND THEN
 # select * from users;
 ##WILL SHOW WHATS IN THE DATABASE
-
-
 import sqlite3
 
+<<<<<<< HEAD
 #creat a database files called users.db
 db = sqlite3.connect('usersexample.db')
+=======
+##BEGINNING OF DATABASE CLASS IN PROGRESS##
+
+##class Database(object):
+##    '''
+##    This class performs database operations
+##    '''
+##    def __init__(self):
+##        pass
+##    def connect(self):
+##        conn = db = sqlite3.connect('users.db')
+##        return conn
+##    def createTable(self):
+##        db = self.connect()
+##        cursor = db.cursor()
+##        cursor.execute('''
+##    CREATE TABLE users(ID INTEGER PRIMARY KEY, username TEXT, password TEXT,
+##                       email TEXT, displayname TEXT)
+##              ''')
+##        cursor.commit()
+##        db.close()
+##        
+##    def getDatabaseInfo(self):
+##        db = self.connect()
+##        cursor = db.cursor()
+##        table = cursor.execute('select * from users')
+##        db.close()
+##        return table
+    
+#create a database files called users.db
+db = sqlite3.connect('users.db')
+>>>>>>> 16ca7435f4ea04146da127a963e05b14014fbac4
 
 
 cursor = db.cursor()
