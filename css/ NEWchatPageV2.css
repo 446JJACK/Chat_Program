@@ -1,0 +1,95 @@
+html {
+  background: #99CCFF;
+  overflow-x: auto;
+}
+
+.holder {
+  float: left;
+  display: inline-block;
+}
+
+.inner {
+  position: fixed;
+  margin: 53px 0px 0px 5px;
+  background: white;
+  padding-left: 3px;
+  padding-right: 3px;
+  min-width: 100px;
+  border: 1px solid #ccc;
+}
+
+#onlineUsrs {
+  border-bottom: none;
+  position: absolute;
+  min-height: 350px;
+  overflow: auto;
+  font-size: 8pt;
+}
+
+#onlineUsrs p {
+  color: #999999;
+}
+
+#online {
+  list-style: none;
+}
+
+#numOn {
+  border-top: none;
+  max-height: 20px;
+  position: absolute;
+  top: 359px;
+  font-size: 5pt;
+}
+
+#numOn p {
+  display: inline-block;
+  white-space: pre;
+}
+
+.tabs {
+  position: relative;   
+  min-height: 400px;
+  clear: both;
+  min-width: 400px;
+  margin: 25px 0;
+}
+.tab {
+  float: left;
+}
+.tab label {
+  background: #eee; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  margin-left: -1px; 
+  position: relative;
+  left: 1px; 
+}
+.tab [type=radio] {
+  display: none;   
+}
+.content {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  background: white;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  overflow-y: auto;
+  word-wrap: break-word;
+}
+[type=radio]:checked ~ label {
+  background: white;
+  border-bottom: 1px solid white;
+  z-index: 2;
+}
+[type=radio]:checked ~ label ~ .content {
+  z-index: 1;
+}
+
+#msg {
+  width: 470px;
+}
+
