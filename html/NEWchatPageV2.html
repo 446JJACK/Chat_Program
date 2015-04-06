@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PSU Chat Rooms</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="holder">
+  <div class="tabs">
+    <div class="tab"> <!--ondblclick="renameTab"-->
+      <input type="radio" id="tab1" name="tabgroup1" checked>
+      <label for="tab1">Chat 1</label>
+
+      <div class="content">
+        
+      </div>
+    </div>
+
+    <div class="tab">
+      <input type="radio" id="tab2" name="tabgroup1">
+      <label for="tab2">Chat 2</label>
+
+      <div class="content">
+        
+      </div>
+    </div>
+
+    <div class="tab">
+      <input type="radio" id="addTab" name="tabgroup1">
+      <label for="addTab"> + </label>
+    </div>
+  </div>
+  </div>
+  <div class="holder">
+  <div class="inner" id="onlineUsrs">
+    <p>Users Online:</p>
+    <ul id="online"></ul>
+  </div>
+  <div class="inner" id="numOn">
+    <p>In chat now:  </p>
+    <p id="numUsrs"></p>
+  </div>
+  </div>
+  <input type="text" id="msg" value="" />
+  <button id="sendbtn">Send</button>
+</body>
+
+</html>
