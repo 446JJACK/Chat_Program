@@ -8,12 +8,11 @@ $(document).ready(function() {
        url: 'http://student.cs.plattsburgh.edu:8081/grab',
        datatype: 'text',
        data: {'message': $message},
-       //Success function
+       //Success
        success: function() {
          //alert('message was stored!');
        }//end success
-     
-     });//end ajax
-  }); //end form ready
-});//end doc function
+      });
+  });
+});
 
