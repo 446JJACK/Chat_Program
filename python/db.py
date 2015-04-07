@@ -10,31 +10,35 @@ import sqlite3
 =======
 ##BEGINNING OF DATABASE CLASS IN PROGRESS##
 
-##class Database(object):
-##    '''
-##    This class performs database operations
-##    '''
-##    def __init__(self):
-##        pass
-##    def connect(self):
-##        conn = db = sqlite3.connect('users.db')
-##        return conn
-##    def createTable(self):
-##        db = self.connect()
-##        cursor = db.cursor()
-##        cursor.execute('''
-##    CREATE TABLE users(ID INTEGER PRIMARY KEY, username TEXT, password TEXT,
-##                       email TEXT, displayname TEXT)
-##              ''')
-##        cursor.commit()
-##        db.close()
-##        
-##    def getDatabaseInfo(self):
-##        db = self.connect()
-##        cursor = db.cursor()
-##        table = cursor.execute('select * from users')
-##        db.close()
-##        return table
+class Database(object):
+    '''
+    This class performs database operations
+    '''
+    def __init__(self, filename):
+        self.filename = filename
+    def connect(self):
+        try:
+            self.conn = sqlite3.connect(filename)
+            self.cursor = self.conn.cursor()
+        except:
+            raise Exception("Connection to database failed!")
+        
+    def createTable(self):
+        db = self.connect()
+        cursor = db.cursor(
+        cursor.execute('''
+    CREATE TABLE users(ID INTEGER PRIMARY KEY, username TEXT, password TEXT,
+                       email TEXT, displayname TEXT)
+              ''')
+        cursor.commit()
+        db.close()
+    
+    def getDatabaseInfo(self):
+        db = self.connect()
+        cursor = db.cursor()
+        table = cursor.execute('select * from users')
+        db.close()
+        return table
     
 #create a database files called users.db
 db = sqlite3.connect('users.db')
