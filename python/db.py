@@ -39,6 +39,11 @@ class Database(object):
         table = cursor.execute('select * from users')
         db.close()
         return table
+
+    #def grabData(self):
+    #    db = self.connect()
+    #    cursor = db.cursor()
+    #   data = cursor.execute('select * from users where id  > ?')
     
 #create a database files called users.db
 db = sqlite3.connect('users.db')
