@@ -40,6 +40,7 @@ class Database(object):
         db.close()
         return table
 
+    #This method will Grab data for processing 
     #def grabData(self):
     #    db = self.connect()
     #    cursor = db.cursor()
