@@ -1,11 +1,38 @@
 #TO DO LIST FOR CLIENT SIDE CODE
 
+4/11/15
+--------
+
+AJAX
+-------
+1) ajax is reading in json data, just have to give it the python url that returns json
+2) need to figure out how to get more than one item to appear in div.
+3) got date and time to show up, but need to figure out a good format.
+
+User Interface
+---------------
+1) Check number 2 in AJAX
+2) text bar moves when screen is normal sized.
+   Maybe we can fix this to keep it on the bottom.
+
+Javascript
+-----------
+1) Adding in some ajax broke the chat.
+   Hitting enter to submit a message displays the text value,
+   but hitting the button runs the functions that carry out the async javascript.
+   This replaces the messages with the JSON data.
+
+2) We're expecting JSON data to be returned from the database, so we need to figure out a plan of attack.
+
+
+
+
+
 2/22/15
 -------
 1) Login.html page
 2) Register.html page
 3) Make a css file that gives each page the same look
-
 
 
 
