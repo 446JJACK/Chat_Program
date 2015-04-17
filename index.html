@@ -1,14 +1,84 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>PSU Chat Rooms</title>
   <link rel="stylesheet" href="css/chat.css">
  <script src="js/NEWchatPageV2.js"></script>
     <script src="ajax.js"></script>
 </head>
-
 <body>
+<!---________________________________________Pop Ups___________________________________________-->
+
+                          <!-- Popup for Register  -->
+<!--
+  Sent as
+  regUsername
+  regPassword
+  regEmail
+-->
+<div id="overlayRegister">
+          <div>
+            <a id="close" href='#' onclick='overlayRegister()'>X</a>
+               <p>Register
+                   <br>
+               </p>
+            <form method="POST">
+               <input type="text" id="regUserName" value="" placeholder="Username"/>
+               <input type="password" id="regPassword" value="" placeholder="Password" />
+
+               <input type="text" id="regEmail" value="" placeholder="Email" />
+               <input type="password" id="regConfPassword" value="" placeholder="Confirm password" />
+            </form>
+               <button id="loginButton" onclick="register()">Register</button>
+               <a href='#' onclick="swapRegisterAndSignIn()">Sign In</a> <br>
+          </div>
+      </div>
+
+<div id="grey">
+                          <!-- Popup for Signing out-->
+    <div id="overlay">
+         <div>
+          <br><a id="close" href='#' onclick='overlay()'>X</a>
+              <p>Thank you for using our Chat service!!!
+                  <br>Have a great day!
+
+              </p>
+         </div>
+     </div>
+     <br>
+                          <!-- Popup for Siging In-->
+<!-- Sent as
+    sinUsername
+    sinPassword
+-->
+     <div id="overlaySignIn">
+          <div>
+            <a id="close" href='#' onclick='overlaySignIn()'>X</a>
+               <p>SignIn
+                   <br>
+               </p>
+            <form method="POST">
+               <input type="text" name="sinUsername"id="sinUserName" value="" placeholder="Username"/>
+               <input type="password" name="sinPassworld" id="sinPassword" value="" placeholder="Password" />
+
+               <button id="loginButton" onclick="login()">Login</button>
+               <a href='#' onclick="swapRegisterAndSignIn()">Register</a> <br>
+            </form>
+          </div>
+</div>                            <!-- Links  -->
+
+     <a href='#' onclick='overlayRegister()'> Register </a><br>
+     <a href='#' onclick="overlaySignIn()">Sign In</a> <br>
+     <a href='#' onclick='overlay()'>Logout</a> <br>
+
+
+<br><br>
+<hr>
+
+
+
+
+
   <div class="holder">
   <div class="tabs">
     <div class="tab"> <!--ondblclick="renameTab"-->
