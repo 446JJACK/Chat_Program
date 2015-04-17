@@ -85,7 +85,7 @@ window.addEventListener("load", function() {
 
 
 
-/*                Popup Javascript!*/
+/*                Popup Javascript!         */
 
 
 function overlay()
@@ -164,6 +164,8 @@ function swapRegisterAndSignIn()
 
 }
 
+
+/*              END POP UP JAVASCRIPT  */
 
 
 
