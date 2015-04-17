@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 
 #TO RUN GO TO COMMAND LINE AND TYPE -> sqlite3 users.db AND THEN
 # select * from users;
@@ -7,8 +7,9 @@ import sqlite3
 
 #creat a database files called users.db
 #db = sqlite3.connect('usersexample.db')
-=======
 ##BEGINNING OF DATABASE CLASS IN PROGRESS##
+
+
 
 class Database(object):
     '''
@@ -25,13 +26,21 @@ class Database(object):
         
     def createTable(self):
         db = self.connect()
-        cursor = db.cursor(
+        cursor = db.cursor()
         cursor.execute('''
-    CREATE TABLE users(ID INTEGER PRIMARY KEY, username TEXT, password TEXT,
+    CREATE TABLE users(ID INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, password TEXT,
                        email TEXT, displayname TEXT)
               ''')
         cursor.commit()
         db.close()
+
+    def messagesTable(self):
+        db = self.connect()
+        cursor = db.cursor()
+        cursor.execute(''' CREATE TABLE 
+
+              
+                      ''')
     
     def getDatabaseInfo(self):
         db = self.connect()
@@ -51,19 +60,19 @@ db = sqlite3.connect('users.db')
 
 
 cursor = db.cursor()
-cursor.execute('''
-    CREATE TABLE users(ID INTEGER PRIMARY KEY, username TEXT, password TEXT,
-                       email TEXT, displayname TEXT)
-              ''')
+#cursor.execute('''
+    #CREATE TABLE users(ID INTEGER PRIMARY KEY, username TEXT, password TEXT,
+#                       email TEXT, displayname TEXT)
+#              ''')
 #EXAMPLE DATA##
-accountname = "jlivu001"
-password = "12345"
-email = "james@gmail.com"
-displayname = "james"
+accountname = "tyler"
+password = "11222"
+email = "tylergmail.com"
+displayname = "tyle
 
 #WHERE DATA GETS PULLED AND THEN STORED INTO DATABASE
-username = ""
-password = ""
+username = "ashley"
+password = "password"
 email = ""
 displayname = "" 
 
