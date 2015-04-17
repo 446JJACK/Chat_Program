@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>PSU Chat</title>
+<link rel="stylesheet" type="text/css" href="demo.css">
+<script src="popup.js"></script>
+</head>
+
+<h1> HEADER STUFF!! <br></h1>
+<h3> UNDER THE HEADER STUFF</h3>
+
+
+
+<body>
+
+<!--Pop Ups -->
+
+
+<!-- Popup for Register  -->
+<div id="overlayRegister">
+          <div>
+            <a id="close" href='#' onclick='overlayRegister()'>X</a>
+               <p>Register
+
+                   <br>
+               </p>
+               <input type="text" id="regUserName" value="" placeholder="Username"/>
+               <input type="password" id="regPassword" value="" placeholder="Password" />
+
+               <input type="text" id="regEmail" value="" placeholder="Email" />
+               <input type="password" id="regConfPassword" value="" placeholder="Confirm password" />
+
+               <button id="loginButton" onclick="register()">Register</button>
+          </div>
+      </div>
+
+
+
+<div id="grey">
+<!-- Popup for Signing out-->
+    <div id="overlay">
+
+         <div>
+          <br><a id="close" href='#' onclick='overlay()'>X</a>
+              <p>Thank you for using our Chat service!!!
+                  <br>Have a great day!
+
+              </p>
+         </div>
+     </div>
+     <br>
+
+     <!-- Popup for Siging In-->
+
+     <div id="overlaySignIn">
+          <div>
+            <a id="close" href='#' onclick='overlaySignIn()'>X</a>
+               <p>SignIn
+                   <br>
+               </p>
+               <input type="text" id="msgUserName" value="" placeholder="Username"/>
+               <input type="password" id="msgPassword" value="" placeholder="Password" />
+
+               <button id="loginButton" onclick="login()">Login</button>
+          </div>
+
+</div>
+<!-- Links  -->
+
+     <a href='#' onclick='overlayRegister()'> Register </a><br>
+     <a href='#' onclick="overlaySignIn()">Sign In</a> <br>
+     <a href='#' onclick='overlay()'>Logout</a> <br>
+
+
+<br><br>
+<hr>
+The rest of the chat should go here
+<hr>
+
+    Footer stuff, copyright
+</div>
+
+</body>
+
+</html>
+
