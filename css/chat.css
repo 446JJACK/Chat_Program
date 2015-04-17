@@ -92,3 +92,77 @@ html {
 #msg {
   width: 470px;
 }
+
+
+
+
+/* pop up CSS*/
+
+#overlay {
+     visibility: hidden;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:100%;
+     text-align:center;
+     z-index: 1000;
+}
+
+#overlay div {
+     width:300px;
+     margin: 100px auto;
+     background-color: #eee;
+     border:5px solid #999;
+     padding:15px;
+     text-align:center;
+     box-shadow: 4px 4px 4px #444;
+     border-radius:25px;
+
+}
+
+#overlaySignIn {
+     visibility: hidden;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:100%;
+     text-align:center;
+     z-index: 1000;
+}
+
+#overlaySignIn div {
+     width:300px;
+     margin: 100px auto;
+     background-color: #eee;
+     border:5px solid #999;
+     padding:15px;
+     text-align:center;
+     box-shadow: 4px 4px 4px #444;
+     border-radius:25px;
+
+}
+
+#overlayRegister {
+     visibility: hidden;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:100%;
+     text-align:center;
+     z-index: 1000;
+}
+
+#overlayRegister div {
+     width:300px;
+     margin: 100px auto;
+     background-color: #eee;
+     border:5px solid #999;
+     padding:15px;
+     text-align:center;
+     box-shadow: 4px 4px 4px #444;
+     border-radius:25px;
+
+}
