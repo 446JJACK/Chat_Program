@@ -32,6 +32,9 @@ def main():
                         VALUES(?,?,?,?)''',(firstName, lastName, email, phoneNumber,))
     print("Group member added! ")
 
+    #NEVER DO THIS; VULNERABLE FOR SQL INJECTION
+    #name = 'James'   
+    #cursor.execute("SELECT * FROM groupMembers WHERE name=? '%s'" % name)
 
     db.commit() #Commits the change to database
     db.close()
