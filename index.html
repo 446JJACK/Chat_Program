@@ -30,7 +30,7 @@
                <input type="password" id="regConfPassword" value="" placeholder="Confirm password" />
             </form>
                <button id="loginButton" onclick="register()">Register</button>
-               <a href='#' onclick="swapRegisterAndSignIn()">Sign In</a> <br>
+               <a id="overlayLink" href='#' onclick="swapRegisterAndSignIn()">Sign In</a> <br>
           </div>
       </div>
 
@@ -38,7 +38,7 @@
                           <!-- Popup for Signing out-->
     <div id="overlay">
          <div>
-          <br><a id="close" href='#' onclick='overlay()'>X</a>
+          <a id="close" href='#' onclick='overlay()'>X</a>
               <p>Thank you for using our Chat service!!!
                   <br>Have a great day!
 
@@ -52,9 +52,11 @@
     sinPassword
 -->
      <div id="overlaySignIn">
+
           <div>
-            <a id="close" href='#' onclick='overlaySignIn()'>X</a>
-               <p>SignIn
+
+            <a class="close" id="close" href='#' onclick='overlaySignIn()'>X</a>
+               <p>Sign In
                    <br>
                </p>
             <form method="POST">
@@ -62,14 +64,16 @@
                <input type="password" name="sinPassworld" id="sinPassword" value="" placeholder="Password" />
 
                <button id="loginButton" onclick="login()">Login</button>
-               <a href='#' onclick="swapRegisterAndSignIn()">Register</a> <br>
+               <a id="overlayLink" href='#' onclick="swapRegisterAndSignIn()">Register</a> <br>
             </form>
-          </div>
+
+        </div>
 </div>                            <!-- Links  -->
 
-     <a href='#' onclick='overlayRegister()'> Register </a><br>
-     <a href='#' onclick="overlaySignIn()">Sign In</a> <br>
-     <a href='#' onclick='overlay()'>Logout</a> <br>
+    <a id="mainPageLink" href='#' onclick='overlay()'>Logout </a>
+    <a id="mainPageLink" href='#' onclick="overlaySignIn()">Sign In </a>
+    <a id="mainPageLink" href='#' onclick='overlayRegister()'> Register </a>
+
 
 
 <br><br>
@@ -117,7 +121,7 @@
   </div>
   <input type="text" id="msg" value="" />
   <button id="sendbtn" onclick="showMessage()">Send</button>
-
+</div>
 
 </body>
 

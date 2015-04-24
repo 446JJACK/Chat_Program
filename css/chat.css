@@ -112,8 +112,8 @@ html {
 #overlay div {
      width:300px;
      margin: 100px auto;
-     background-color: #eee;
-     border:5px solid #999;
+     background-color: #DDFFFF;
+     border:5px solid #eee;
      padding:15px;
      text-align:center;
      box-shadow: 4px 4px 4px #444;
@@ -132,11 +132,13 @@ html {
      z-index: 1000;
 }
 
+
+
 #overlaySignIn div {
      width:300px;
      margin: 100px auto;
-     background-color: #eee;
-     border:5px solid #999;
+     background-color: #DDFFFF;
+     border:5px solid #eee;
      padding:15px;
      text-align:center;
      box-shadow: 4px 4px 4px #444;
@@ -155,14 +157,69 @@ html {
      z-index: 1000;
 }
 
+
+
 #overlayRegister div {
      width:300px;
      margin: 100px auto;
-     background-color: #eee;
-     border:5px solid #999;
+     background-color: #DDFFFF;
+     border:5px solid #eee;
      padding:15px;
      text-align:center;
      box-shadow: 4px 4px 4px #444;
      border-radius:25px;
+}
+
+.close a {
+    position: absolute;
+    top: 0px;
+    right: 0px;
 
 }
+#close {
+  float:right;
+  margin: 10px;
+  top: 0px;
+  right: 0px;
+  text-decoration: none;
+}
+
+#mainPageLink {
+  float:right;
+  margin: 5px;
+  top: 0px;
+  right: 0px;
+  text-decoration: none;
+
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 1px 1px 1px #000;
+}
+#mainPageLink:hover {
+  text-decoration: underline;
+}
+
+#overlayLink {
+  text-decoration: none;
+}
+#overlayLink:hover {
+  text-decoration: underline;
+}
+
+
+#overlay p {
+
+  font-size: 36px;
+  text-align: center;
+}
+
+#overlaySignIn p {
+  font-size: 36px;
+  text-align: center;
+}
+
+#overlayRegister p {
+  font-size: 36px;
+  text-align: center;
+}
+
