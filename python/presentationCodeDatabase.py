@@ -14,18 +14,18 @@ def main():
 
 
     
-    #cursor = conn.cursor()
-    #cursor.execute('''CREATE TABLE groupMembers
-    #           (ID INTEGER PRIMARY KEY AUTOINCREMENT,
-    #           firstName VARCHAR(30),
-    #           lastName VARCHAR(30),
-    #           email VARCHAR(50),
-    #           phoneNumber INT)''')
+    
+    cursor.execute('''CREATE TABLE IF NOT EXISTS groupMembers
+               (ID INTEGER PRIMARY KEY AUTOINCREMENT,
+               firstName VARCHAR(30),
+               lastName VARCHAR(30),
+               email VARCHAR(50),
+               phoneNumber INT)''')
 
-    firstName = input("Please Enter the first name of your group member: ",)
-    lastName = input("Please Enter the last name of your group member: ",)
-    email = input("Please enter the email of your group member: ",)
-    phoneNumber = input("Please enter the phone number of your group member: ",)
+    firstName = input("Please Enter the first name of your group member: ")
+    lastName = input("Please Enter the last name of your group member: ")
+    email = input("Please enter the email of your group member: ")
+    phoneNumber = input("Please enter the phone number of your group member: ")
 
     
     cursor.execute('''INSERT INTO groupMembers(firstName,lastName, email, phoneNumber)
