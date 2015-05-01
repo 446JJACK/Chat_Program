@@ -131,7 +131,21 @@ body {
 	border-color: #1CA347;
 }
 
-/* FAQ page CSS */
+/* About US Page CSS. */
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.img-center {
+	margin: 0 auto;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+/* FAQ Page CSS. */
 <style>
     .faqHeader {
         font-size: 27px;
