@@ -34,5 +34,5 @@ Javascript
 2) Register.html page
 3) Make a css file that gives each page the same look
 
-
-
+5/02/15
+Finished website, just need to integrate the current chatroom to the website and fix up login/register page
