@@ -17,13 +17,6 @@
     <!-- Custom CSS -->
     <link href="css/ourcss.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
 
 <body>
@@ -60,18 +53,56 @@
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
+        </li>
         </div>
         <!-- /.container -->
     </nav>
-
+	</div>
+   
     <!-- Page Content -->
-    <div class="container">
-    
-    <!-- Heading Row -->
-            <!-- /.col-md-8 -->
-            <div class="col-md-4">
-              <h1>Chatroom page goes here!!!!!</h1>
-            </div>
+ 
+ <!-- Chat Room -->
+<br>
+<hr>
+	<div class="holder">
+  <div class="tabs">
+    <div class="tab"> <!--ondblclick="renameTab"-->
+      <input type="radio" id="tab1" name="tabgroup1" checked>
+      <label for="tab1">Chat 1</label>
+
+      <div class="content">
+
+      </div>
+    </div>
+
+    <div class="tab">
+      <input type="radio" id="tab2" name="tabgroup1">
+      <label for="tab2">Chat 2</label>
+
+      <div class="content">
+
+      </div>
+    </div>
+
+    <div class="tab">
+      <input type="radio" id="addTab" name="tabgroup1">
+      <label for="addTab"> + </label>
+    </div>
+  </div>
+  </div>
+  <div class="holder">
+  <div class="inner" id="onlineUsrs">
+    <p>Users Online:</p>
+    <ul id="online"></ul>
+  </div>
+  <div class="inner" id="numOn">
+    <p>In chat now:  </p>
+    <p id="numUsrs"></p>
+  </div>
+  </div>
+  <input type="text" id="msg" value="" />
+  <button id="sendbtn" onclick="showMessage()">Send</button>
+</div>
 
 
         <!-- Footer -->
@@ -83,7 +114,6 @@
             </div>
         </footer>
 
-    </div>
     <!-- /.container -->
 
     <!-- jQuery -->
@@ -91,6 +121,10 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    
+    <!-- Chatroom JavaScript -->
+    <script src="js/chat.js"></script>
+    <script src="js/ajax.js"></script>
 
 </body>
 
