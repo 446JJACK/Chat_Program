@@ -1,128 +1,155 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>PSU Chat Rooms</title>
-  <link rel="stylesheet" href="css/chat.css">
- <script src="js/chat.js"></script>
-    <script src="ajax.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
+
 <body>
-<!---________________________________________Pop Ups___________________________________________-->
-
-                          <!-- Popup for Register  -->
-<!--
-  Sent as
-  regUsername
-  regPassword
-  regEmail
--->
-<div id="overlayRegister">
-          <div>
-            <a id="close" href='#' onclick='overlayRegister()'>X</a>
-               <p>Register
-                   <br>
-               </p>
-            <form method="POST">
-               <input type="text" id="regUserName" value="" placeholder="Username"/>
-               <input type="password" id="regPassword" value="" placeholder="Password" />
-
-               <input type="text" id="regEmail" value="" placeholder="Email" />
-               <input type="password" id="regConfPassword" value="" placeholder="Confirm password" />
-            </form>
-               <button id="loginButton" onclick="register()">Register</button>
-               <a id="overlayLink" href='#' onclick="swapRegisterAndSignIn()">Sign In</a> <br>
-          </div>
-      </div>
-
-<div id="grey">
-                          <!-- Popup for Signing out-->
+  <!---________________________________________Pop Ups___________________________________________-->
+  <!-- Popup for Register -->
+  <!--
+        Sent as
+        regUsername
+        regPassword
+        regEmail
+  -->
+  <div class="overlays" id="overlayRegister">
+    <div>
+      <a class="close" id="close" href='#' onclick='overlayRegister()'>X</a>
+      <p>Register
+        <br>
+      </p>
+      <form method="POST">
+        <input type="text" id="regUserName" value="" placeholder="Username" />
+        <input type="password" id="regPassword" value="" placeholder="Password" />
+        <input type="text" id="regEmail" value="" placeholder="Email" />
+        <input type="password" id="regConfPassword" value="" placeholder="Confirm password" />
+      </form>
+      <button id="loginButton" onclick="register()">Register</button>
+      <a class="inoverlink" id="overlayLink" href='#' onclick="swapRegisterAndSignIn()">Sign In</a> 
+      <br>
+    </div>
+  </div>
+  <div class="overlays" id="grey">
+    <!-- Popup for Signing out-->
     <div id="overlay">
-         <div>
-          <a id="close" href='#' onclick='overlay()'>X</a>
-              <p>Thank you for using our Chat service!!!
-                  <br>Have a great day!
-
-              </p>
-         </div>
-     </div>
-     <br>
-                          <!-- Popup for Siging In-->
-<!-- Sent as
-    sinUsername
-    sinPassword
--->
-     <div id="overlaySignIn">
-
-          <div>
-
-            <a class="close" id="close" href='#' onclick='overlaySignIn()'>X</a>
-               <p>Sign In
-                   <br>
-               </p>
-            <form method="POST">
-               <input type="text" name="sinUsername"id="sinUserName" value="" placeholder="Username"/>
-               <input type="password" name="sinPassworld" id="sinPassword" value="" placeholder="Password" />
-
-               <button id="loginButton" onclick="login()">Login</button>
-               <a id="overlayLink" href='#' onclick="swapRegisterAndSignIn()">Register</a> <br>
-            </form>
-
-        </div>
-</div>                            <!-- Links  -->
-
-    <a id="mainPageLink" href='#' onclick='overlay()'>Logout </a>
-    <a id="mainPageLink" href='#' onclick="overlaySignIn()">Sign In </a>
-    <a id="mainPageLink" href='#' onclick='overlayRegister()'> Register </a>
-
-
-
-<br><br>
-<hr> <!--  END POP UP -->
-
-
-
-
-
-  <div class="holder">
-  <div class="tabs">
-    <div class="tab"> <!--ondblclick="renameTab"-->
-      <input type="radio" id="tab1" name="tabgroup1" checked>
-      <label for="tab1">Chat 1</label>
-
-      <div class="content">
-
+      <div>
+        <a class="close" id="close" href='#' onclick='overlay()'>X</a>
+        <p>Thank you for using our Chat service!!!
+          <br>Have a great day!
+        </p>
       </div>
     </div>
+  </div>
+  <br>
+  <!-- Popup for Siging In-->
+  <!-- Sent as
+         sinUsername
+         sinPassword
+    -->
+  <div class="overlays" id="overlaySignIn">
+    <div>
+      <a class="close" id="close" href='#' onclick='overlaySignIn()'>X</a>
+      <p>Sign In
+        <br>
+      </p>
+      <form method="POST">
+        <input type="text" name="sinUsername" id="sinUserName" value="" placeholder="Username" />
+        <input type="password" name="sinPassworld" id="sinPassword" value="" placeholder="Password" />
+        <button id="loginButton" onclick="login()">Login</button>
+        <a id="overlayLink" href='#' onclick="swapRegisterAndSignIn()">Register</a> 
+        <br>
+      </form>
+    </div>
+  </div>
+  <div class="overlays" id="overlaySettings">
+    <div>
+      <a class="close" id="close" hred="#" onclick='overlaySettings()'>X</a>
+      <p>Settings
+        <br>
+      </p>
+      <select id="color">
+        <option id="coldef" value="black" selected>Default</option>
+        <option id="colpin" value="pink">Pink</option>
+        <option id="colred" value="red">Red</option>
+        <option id="colora" value="orange">Orange</option>
+        <option id="colyel" value="yellow">Yellow</option>
+        <option id="colgre" value="green">Green</option>
+        <option id="colblu" value="blue">Blue</option>
+        <option id="colpur" value="purple">Purple</option>
+      </select>
+      <select id="size">
+        <option id="sizdef" value="10pt" selected>Default</option>
+        <option id="siz5" value="5pt">5pt</option>
+        <option id="siz6" value="6pt">6pt</option>
+        <option id="siz7" value="7pt">7pt</option>
+        <option id="siz8" value="8pt">8pt</option>
+        <option id="siz9" value="9pt">9pt</option>
+        <option id="siz11" value="11pt">11pt</option>
+        <option id="siz12" value="12pt">12pt</option>
+        <option id="siz13" value="13pt">13pt</option>
+        <option id="siz14" value="14pt">14pt</option>
+        <option id="siz15" value="15pt">15pt</option>
+        <option id="siz16" value="16pt">16pt</option>
+        <option id="siz17" value="17pt">17pt</option>
+        <option id="siz18" value="18pt">18pt</option>
+      </select>
+      <select id="font">
+        <option id="fondef" value="verdana" selected>Default</option>
+        <option id="fonari" value="arial">Arial</option>
+        <option id="foncon" value="courier new">Courier New</option>
+        <option id="fongeo" value="georgia">Georgia</option>
+        <option id="fontnr" value="times new roman">Times New Roman</option>
+      </select>
+    </div>
+  </div>
+  <!-- Links -->
+  <a class="overlinks" id="mainPageLink" href='#' onclick='overlay()'>Logout </a>
+  <a class="overlinks" id="mainPageLink" href='#' onclick="overlaySignIn()">Sign In </a>
+  <a class="overlinks" id="mainPageLink" href='#' onclick='overlayRegister()'> Register </a>
+  <a class="overlinks" id="mainPageLink" href="#" onclick="overlaySettings()">Settings</a>
+  <br>
+  <br>
+  <hr>
+  <!--                       END POP UP                         -->
+  <!--   -->
+  <div class="holder">
+    <div class="tabs">
+      <div class="tab">
+        <input type="radio" id="tab1" name="tabgroup1" checked>
+        <label for="tab1">Chat 1</label>
+        <div class="content"></div>
+      </div>
 
-    <div class="tab">
-      <input type="radio" id="tab2" name="tabgroup1">
-      <label for="tab2">Chat 2</label>
+      <div class="tab">
+        <input type="radio" id="tab2" name="tabgroup1">
+        <label for="tab2">Chat 2</label>
+        <div class="content"></div>
+      </div>
 
-      <div class="content">
-
+      <div class="tab">
+        <input type="radio" id="addTab" name="tabgroup1">
+        <label for="addTab">+</label>
       </div>
     </div>
-
-    <div class="tab">
-      <input type="radio" id="addTab" name="tabgroup1">
-      <label for="addTab"> + </label>
-    </div>
   </div>
-  </div>
-  <div class="holder">
+  <!--   -->
   <div class="inner" id="onlineUsrs">
     <p>Users Online:</p>
     <ul id="online"></ul>
   </div>
+  <!--   -->
   <div class="inner" id="numOn">
-    <p>In chat now:  </p>
+    <p>In chat now:</p>
     <p id="numUsrs"></p>
   </div>
-  </div>
-  <input type="text" id="msg" value="" />
-  <button id="sendbtn" onclick="showMessage()">Send</button>
-</div>
 
+  <textarea id="msg" value="" maxlength="500"></textarea>
+  <!--   -->
+  <button id="sendbtn">Send</button>
 </body>
 
 </html>
