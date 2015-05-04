@@ -1,58 +1,73 @@
-html {
+/* -------------------- START ASH'S STUFF ------------------------- */
+
+html,
+body {
   background: #99CCFF;
-  overflow-x: auto;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
 }
 
+#msg {
+  font-family: Verdana;
+  font-size: 10pt;
+  color: Black;
+  position: absolute;
+  top: 545px;
+  left: 5px;
+  min-width: 50%;
+  max-width: 80%;
+  max-height: 300px;
+}
+#sendbtn {
+  position: absolute;
+  top: 545px;
+}
 .holder {
-  float: left;
-  display: inline-block;
+  position: absolute;
+  left: 5px;
+  width: 75%;
+  margin: 25px 0;
 }
-
 .inner {
-  position: fixed;
-  margin: 53px 0px 0px 5px;
+  position: absolute;
+  left: 76%;
   background: white;
-  padding-left: 3px;
-  padding-right: 3px;
-  min-width: 100px;
+  width: 20%;
+  margin-left: 5px;
   border: 1px solid #ccc;
 }
-
 #onlineUsrs {
+  top: 127px;
   border-bottom: none;
-  position: absolute;
-  min-height: 350px;
+  height: 396px;
   overflow: auto;
   font-size: 8pt;
+  padding: 0px 3px 0px 3px;
 }
-
 #onlineUsrs p {
   color: #999999;
+  margin: 2px 0;
 }
-
 #online {
   list-style: none;
+  margin: 0;
 }
-
 #numOn {
   border-top: none;
-  max-height: 20px;
-  position: absolute;
-  top: 359px;
-  font-size: 5pt;
+  top: 524px;
+  font-size: 6pt;
+  padding: 0px 3px 0px 3px;
 }
-
 #numOn p {
   display: inline-block;
   white-space: pre;
+  margin: 2px;
 }
-
 .tabs {
   position: relative;
-  min-height: 400px;
-  clear: both;
-  min-width: 400px;
-  margin: 25px 0;
+
 }
 .tab {
   float: left;
@@ -64,162 +79,101 @@ html {
   margin-left: -1px;
   position: relative;
   left: 1px;
+  height: 5px;
 }
-.tab [type=radio] {
+.tab input[type=radio] {
   display: none;
 }
 .content {
   position: absolute;
-  top: 28px;
+  height: 400px;
+  top: 27px;
   left: 0;
   background: white;
   right: 0;
   bottom: 0;
-  padding: 20px;
+  padding: 5px;
   border: 1px solid #ccc;
   overflow-y: auto;
+  white-space: pre-line;
   word-wrap: break-word;
 }
-[type=radio]:checked ~ label {
+.content p {
+  margin: 1px 0;
+}
+.tab input[type=radio]:checked ~ label {
   background: white;
   border-bottom: 1px solid white;
   z-index: 2;
 }
-[type=radio]:checked ~ label ~ .content {
+.tab input[type=radio]:checked ~ label ~ .content {
   z-index: 1;
 }
+/* ---------------------- END ASH'S STUFF ----------------------- */
 
-#msg {
-  width: 470px;
-}
+/* ------------------- START KEVIN'S STUFF ---------------------- */
 
-
-
-
-/*                                                pop up CSS*/
-
-#overlay {
-     visibility: hidden;
-     position: absolute;
-     left: 0px;
-     top: 0px;
-     width:100%;
-     height:100%;
-     text-align:center;
-     z-index: 1000;
-}
-
-#overlay div {
-     width:300px;
-     margin: 100px auto;
-     background-color: #DDFFFF;
-     border:5px solid #eee;
-     padding:15px;
-     text-align:center;
-     box-shadow: 4px 4px 4px #444;
-     border-radius:25px;
-
-}
-
-#overlaySignIn {
-     visibility: hidden;
-     position: absolute;
-     left: 0px;
-     top: 0px;
-     width:100%;
-     height:100%;
-     text-align:center;
-     z-index: 1000;
-}
-
-
-
-#overlaySignIn div {
-     width:300px;
-     margin: 100px auto;
-     background-color: #DDFFFF;
-     border:5px solid #eee;
-     padding:15px;
-     text-align:center;
-     box-shadow: 4px 4px 4px #444;
-     border-radius:25px;
-
-}
-
-#overlayRegister {
-     visibility: hidden;
-     position: absolute;
-     left: 0px;
-     top: 0px;
-     width:100%;
-     height:100%;
-     text-align:center;
-     z-index: 1000;
-}
-
-
-
-#overlayRegister div {
-     width:300px;
-     margin: 100px auto;
-     background-color: #DDFFFF;
-     border:5px solid #eee;
-     padding:15px;
-     text-align:center;
-     box-shadow: 4px 4px 4px #444;
-     border-radius:25px;
-}
-
-.close a {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-
-}
-#close {
-  float:right;
-  margin: 10px;
+.overlinks {
+  color: black;
+  float: right;
+  margin: 3px;
+  padding: 5px;
   top: 0px;
   right: 0px;
   text-decoration: none;
-}
-
-#mainPageLink {
-  float:right;
-  margin: 5px;
-  top: 0px;
-  right: 0px;
-  text-decoration: none;
-
   border-radius: 6px;
   background: #fff;
   box-shadow: 1px 1px 1px #000;
 }
-#mainPageLink:hover {
+.overlinks hover {
   text-decoration: underline;
 }
-
-#overlayLink {
+.overlays {
+  visibility: hidden;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+.overlays div {
+  width: 300px;
+  margin: 100px auto;
+  background-color: #DDFFFF;
+  border: 5px solid #eee;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 4px 4px 4px #444;
+  border-radius: 25px;
+  
+}
+.overlays p {
+  font-size: 36px;
+  text-align: center;
+}
+.close {
+  float: right;
+  margin: 10px;
+  top: 0px;
+  right: 0px;
+}
+.close a {
+  position: absolute;
+  top: 0px;
+  right: 0px;
   text-decoration: none;
 }
-#overlayLink:hover {
-  text-decoration: underline;
+.inoverlink {
+  color: black;
+  text-decoration: none;
+  float: right;
+  margin: 5px;
+  top: 0px;
+  right: 0px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 1px 1px 1px #000;
 }
-
-
-#overlay p {
-
-  font-size: 36px;
-  text-align: center;
-}
-
-#overlaySignIn p {
-  font-size: 36px;
-  text-align: center;
-}
-
-#overlayRegister p {
-  font-size: 36px;
-  text-align: center;
-}
-
+/* --------------------- END KEVIN'S STUFF ----------------------- */
