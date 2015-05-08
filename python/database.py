@@ -120,7 +120,8 @@ def getFromMessages(username, displayname):
 
         conn.commit()
         conn.close()
-        return messageList
+
+        return json.dumps(messageList)
     except Exception as e:
         conn.close()
         print(e)
@@ -204,12 +205,12 @@ if createUserTable(conn, cursor):
     print('table creation successful')
 if createMessagesTable(conn, cursor):
     print('messages table created!')
-insertIntoMessages('john smith', 'theJohnGuy', 'All Hail Caesar')
-insertIntoMessages('john smith', 'theJohnGuy', 'I changed my mind')
-insertIntoMessages('Chris B Fries', 'mmmfries214', 'LULZ')
-insertIntoMessages('May O Naize', 'unhealthyNut0912', 'Does this chat even work?!')
-insertIntoMessages('john smith', 'theJohnGuy', 'Yeah it does!! Just watch')
-insertIntoMessages('Chris B Fries', 'mmmfries214', "you must be joking May! ")
+# insertIntoMessages('john smith', 'theJohnGuy', 'All Hail Caesar')
+# insertIntoMessages('john smith', 'theJohnGuy', 'I changed my mind')
+# insertIntoMessages('Chris B Fries', 'mmmfries214', 'LULZ')
+# insertIntoMessages('May O Naize', 'unhealthyNut0912', 'Does this chat even work?!')
+# insertIntoMessages('john smith', 'theJohnGuy', 'Yeah it does!! Just watch')
+# insertIntoMessages('Chris B Fries', 'mmmfries214', "you must be joking May! ")
 
 messages = getFromMessages('Chris B Fries', 'mmmfries214')
 print(messages)
@@ -217,14 +218,14 @@ print()
 messages = getFromMessages('john smith', 'theJohnGuy')
 print(messages)
 print()
-messages = getFromMessages('May O Naize', 'unhealthyNut0912')
-print(messages)
-print()
+# messages = getFromMessages('May O Naize', 'unhealthyNut0912')
+# print(messages)
+# print()
 
 
 
-
-
+parsed_json = json.loads(messages)
+print(parsed_json[0])
 
 
 
