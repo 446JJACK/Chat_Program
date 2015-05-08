@@ -2,7 +2,7 @@
 
 import sqlite3
 import json
-filename = 'wompers.db'
+filename = 'jjackDB.db'
 
 
 
@@ -205,15 +205,21 @@ if createUserTable(conn, cursor):
 if createMessagesTable(conn, cursor):
     print('messages table created!')
 insertIntoMessages('john smith', 'theJohnGuy', 'All Hail Caesar')
-#if insertIntoUsers('kevin', 'wombocombo', 'email@email', 'WHOA!'):
-  #  print('insert successful')
-#messages = getDatabaseInfo()
-#print(messages)
-#insertMessage('hello world!', 'kevin')
-messages = getFromMessages('kevin boyette', 'kevin')
+insertIntoMessages('john smith', 'theJohnGuy', 'I changed my mind')
+insertIntoMessages('Chris B Fries', 'mmmfries214', 'LULZ')
+insertIntoMessages('May O Naize', 'unhealthyNut0912', 'Does this chat even work?!')
+insertIntoMessages('john smith', 'theJohnGuy', 'Yeah it does!! Just watch')
+insertIntoMessages('Chris B Fries', 'mmmfries214', "you must be joking May! ")
+
+messages = getFromMessages('Chris B Fries', 'mmmfries214')
 print(messages)
+print()
 messages = getFromMessages('john smith', 'theJohnGuy')
 print(messages)
+print()
+messages = getFromMessages('May O Naize', 'unhealthyNut0912')
+print(messages)
+print()
 
 
 
