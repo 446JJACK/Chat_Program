@@ -17,6 +17,7 @@ class Database(object):
     '''
     def __init__(self, filename):
         self.filename = filename
+        self.connection = None
 
     def _connect(self):
         try:
@@ -68,6 +69,17 @@ class Database(object):
         table = cursor.execute('select * from users')
         db.close()
         return table
+
+    def disconnect(self):
+        if self.connection is not None:
+            self.connection.close()
+        self.connection
+
+    def commit(self):
+        if self.connection is not None:
+            self.connection.commit()
+
+            
 
 
 db = Database('database.db')
