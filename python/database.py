@@ -4,8 +4,41 @@ import sqlite3
 import json
 filename = 'jjackDB.db'
 
-
-
+##############################################################
+#          IN process of converting this all to a class      #                                            #
+##############################################################
+##class Database(object):
+##
+##    def __init__(self, name):
+##        self.name = name
+##        self.connection = None
+##
+##    def __enter__(self):
+##        self.connect()
+##        return self
+##
+##    def __exit__(self,type,value,traceback):
+##        if sefl connection is not None:
+##            if value is not None:
+##                self.rollback()
+##            else:
+##                self.commit()
+##            self.disconnect()
+##
+##    def connect(self):
+##        if self.name is None:
+##            raise Exception("Database creation failed!")
+##        self.connection = sqlite3.connect('%s.db' % self.name)
+##    
+##    def disconnect(self):
+##        if self.connection is not None:
+##            self.connection.close()
+##        self.connection = None
+##
+##    def rollback(self):
+##        if self.connection is not None:
+##            self.connection.rollback()
+####################################################################
 
 def createUserTable(conn, cursor):
     try:
