@@ -1,10 +1,8 @@
-# CHAT_PROGRAM
-Names:
-Kevin Boyette
-Ashley Regan
-James Livulpi
-Joseph Kelly
+| CHAT_PROGRAM |
+|--------------|
+|Kevin Boyette |
+|Ashley Regan  |
+|James Livulpi |
+|Joseph Kelly  |
+----------------
 
-http://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
-
-http://rogerdudler.github.io/git-guide/
