@@ -5,6 +5,7 @@ from twisted.web import server, resource
 from twisted.python import log
 import sys
 
+
 class Chat(LineReceiver):
 
     def __init__(self, users):
@@ -46,13 +47,14 @@ class Chat(LineReceiver):
 class ChatFactory(Factory):
 
     def __init__(self):
-        self.users = {} # maps user names to Chat instances
+        self.users = {}  # maps user names to Chat instances
 
     def buildProtocol(self, addr):
         return Chat(self.users)
 
+
 def main():
-    ##log.startLogging(sys.stdout) ##Uncomment for debugging purposes
+    # log.startLogging(sys.stdout) ##Uncomment for debugging purposes
     reactor.listenTCP(8062, ChatFactory())
     reactor.run()
 

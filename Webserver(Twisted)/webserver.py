@@ -3,7 +3,7 @@ from twisted.web.resource import Resource
 from twisted.internet import reactor
 from twisted.web.static import File
 from twisted.web.server import Site
-    
+
 
 def main():
     root = Resource()

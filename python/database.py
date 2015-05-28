@@ -7,38 +7,39 @@ filename = 'jjackDB.db'
 ##############################################################
 #          IN process of converting this all to a class      #                                            #
 ##############################################################
-##class Database(object):
+# class Database(object):
 ##
-##    def __init__(self, name):
+# def __init__(self, name):
 ##        self.name = name
 ##        self.connection = None
 ##
-##    def __enter__(self):
-##        self.connect()
-##        return self
+# def __enter__(self):
+# self.connect()
+# return self
 ##
-##    def __exit__(self,type,value,traceback):
-##        if sefl connection is not None:
-##            if value is not None:
-##                self.rollback()
-##            else:
-##                self.commit()
-##            self.disconnect()
+# def __exit__(self,type,value,traceback):
+# if sefl connection is not None:
+# if value is not None:
+# self.rollback()
+# else:
+# self.commit()
+# self.disconnect()
 ##
-##    def connect(self):
-##        if self.name is None:
+# def connect(self):
+# if self.name is None:
 ##            raise Exception("Database creation failed!")
 ##        self.connection = sqlite3.connect('%s.db' % self.name)
-##    
-##    def disconnect(self):
-##        if self.connection is not None:
-##            self.connection.close()
+##
+# def disconnect(self):
+# if self.connection is not None:
+# self.connection.close()
 ##        self.connection = None
 ##
-##    def rollback(self):
-##        if self.connection is not None:
-##            self.connection.rollback()
+# def rollback(self):
+# if self.connection is not None:
+# self.connection.rollback()
 ####################################################################
+
 
 def createUserTable(conn, cursor):
     try:
@@ -58,6 +59,7 @@ def createUserTable(conn, cursor):
     except:
         Exception("Database creation failed!")
 
+
 def createMessagesTable(conn, cursor):
     try:
         query = '''
@@ -75,7 +77,8 @@ def createMessagesTable(conn, cursor):
     except:
         Exception("Database creation failed!")
 
-def insertIntoUsers( username, password, email, displayname):
+
+def insertIntoUsers(username, password, email, displayname):
     try:
         conn = sqlite3.connect(filename)
         cursor = conn.cursor()
@@ -96,14 +99,15 @@ def insertIntoUsers( username, password, email, displayname):
                 password,
                 email,
                 displayname
-                )
             )
+        )
         conn.commit()
         conn.close()
     except:
         Exception("INSERTION FAILED!")
 
-def insertIntoMessages( username, displayname, message):
+
+def insertIntoMessages(username, displayname, message):
     try:
         conn = sqlite3.connect(filename)
         cursor = conn.cursor()
@@ -122,12 +126,13 @@ def insertIntoMessages( username, displayname, message):
                 username,
                 displayname,
                 message
-                )
             )
+        )
         conn.commit()
         conn.close()
     except:
         Exception("INSERTION FAILED!")
+
 
 def getFromMessages(username, displayname):
     try:
@@ -147,7 +152,7 @@ def getFromMessages(username, displayname):
             '''
 
         messageList = []
-        cursor.execute(query,(username, displayname,))
+        cursor.execute(query, (username, displayname,))
         for row in cursor.fetchall():
             messageList.append(row)
 
@@ -177,7 +182,7 @@ def getUser(name):
             '''
 
         messageList = []
-        cursor.execute(query,(name,))
+        cursor.execute(query, (name,))
         for row in cursor.fetchall():
             messageList.append(row)
 
@@ -190,7 +195,7 @@ def getUser(name):
         raise
 
 
-def updateMessage( message, name):
+def updateMessage(message, name):
     pass
     try:
         conn = sqlite3.connect(filename)
@@ -256,16 +261,5 @@ print()
 # print()
 
 
-
 parsed_json = json.loads(messages)
 print(parsed_json[0])
-
-
-
-
-
-
-
-
-
-
